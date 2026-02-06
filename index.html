@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>專業模型 - 店面遷移導航</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
+    <style>
+        :root {
+            --railway-blue: #003366; /* 經典鐵道藍 */
+            --warning-yellow: #ffcc00; /* 警示黃 */
+        }
+        body { font-family: "Microsoft JhengHei", sans-serif; background: #e0e0e0; padding: 10px; }
+        header { background: var(--railway-blue); color: white; padding: 2rem 1rem; text-align: center; border-bottom: 5px solid var(--warning-yellow); border-radius: 8px 8px 0 0; }
+        .container { max-width: 700px; margin: auto; background: white; padding: 20px; border-radius: 0 0 8px 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        .step-card { border-left: 5px solid var(--railway-blue); margin-bottom: 30px; padding-left: 15px; }
+        .step-img { width: 100%; border-radius: 5px; border: 1px solid #ccc; margin-top: 10px; }
+        .badge { background: var(--railway-blue); color: white; padding: 3px 10px; border-radius: 20px; font-size: 0.9em; }
+        .nav-button { display: block; background: #2e7d32; color: white; text-align: center; padding: 15px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.2em; margin: 20px 0; box-shadow: 0 4px #1b5e20; }
+        .nav-button:active { box-shadow: none; transform: translateY(4px); }
+        .footer-info { text-align: center; font-size: 0.8em; color: #777; margin-top: 40px; border-top: 1px solid #ddd; padding-top: 20px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1 style="color: white; margin: 0;">專業模型 專業模型</h1>
+        <p style="margin: 10px 0 0 0;">🚚 店面正式遷移公告 🚚</p>
+    </header>
+
+    <section>
+        <h2 style="text-align: center;">新址：高雄市三民區建國一路402巷5弄7號</h2>
+        <p style="text-align: center; color: #666;">從<strong>民族車站</strong>步行至店面約 11 分鐘</p>
+        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=高雄市三民區建國一路402巷5弄7號" class="nav-button">🧭 點我直接 Google 地圖導航</a>
+
+        <hr>
+
+        <div class="step-card">
+            <h3><span class="badge">STEP 1</span> 民族車站出口</h3>
+            <p>出站後，請往<strong>凱旋一路</strong>（往南）方向前進。</p>
+            <img src="https://images.unsplash.com/photo-1570126688035-1e0adadb3107?auto=format&fit=crop&w=800&q=80" alt="民族車站出口" class="step-img">
+            <small>提示：沿著鐵道旁的凱旋路直直走就對了</small>
+        </div>
+
+        <div class="step-card">
+            <h3><span class="badge">STEP 2</span> 凱旋路與建國路口</h3>
+            <p>看到建國路口的大路牌，請準備<strong>右轉進入 402 巷</strong>。</p>
+            <img src="https://images.unsplash.com/photo-1575271110540-348630c7919a?auto=format&fit=crop&w=800&q=80" alt="路口街景" class="step-img">
+            <small>提示：路口較寬，轉彎時請注意安全</small>
+        </div>
+
+        <div class="step-card">
+            <h3><span class="badge">STEP 3</span> 抵達 5 弄</h3>
+            <p>進入 402 巷約 50 公尺，看到 <strong>5 弄</strong> 路牌請右轉。</p>
+            <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=800&q=80" alt="巷弄指引" class="step-img">
+            <small>提示：看到 7 號就到囉！我們就在這等您！</small>
+        </div>
+    </section>
+
+    <footer class="footer-info">
+        <p>專業模型 (Professional Model)<br>鐵道模型｜場景製作｜專業諮詢</p>
+        <p>如有任何問題，歡迎私訊我們</p>
+    </footer>
+</div>
+
+</body>
+</html>
