@@ -20,7 +20,7 @@ header {
 }
 
 .logo-img { 
-    max-width: 120px; 
+    max-width: 150px; 
     height: auto; 
     margin-bottom: 10px; 
     border-radius: 5px; 
@@ -35,7 +35,7 @@ header {
     box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
 }
 
-/* 解決按鈕顏色問題：強制改為深藍背景 + 白色文字 */
+/* 導航按鈕：深藍背景 + 白色文字 */
 .nav-button { 
     display: block; 
     background: var(--railway-blue); 
@@ -48,11 +48,12 @@ header {
     font-size: 1.2em; 
     margin: 20px 0; 
     box-shadow: 0 4px #002244; 
+    transition: background 0.3s;
 }
 
 .nav-button:hover { 
     background: #004488; 
-    color: var(--warning-yellow) !important; /* 滑鼠移上去變黃色 */
+    color: var(--warning-yellow) !important; 
 }
 
 .step-card { 
@@ -61,12 +62,13 @@ header {
     padding-left: 15px; 
 }
 
-.step-img, iframe { 
+/* 圖片樣式：設定為自動高度，避免截圖變形 */
+.step-img { 
     width: 100%; 
+    height: auto; /* 確保圖片比例正確 */
     border-radius: 5px; 
     border: 1px solid #ccc; 
     margin-top: 10px; 
-    min-height: 300px; 
 }
 
 .badge { 
@@ -95,4 +97,31 @@ small {
     background: #f9f9f9; 
     padding: 8px; 
     border-radius: 4px; 
+}
+
+/* --- 以下是新增的街景連結樣式 --- */
+
+/* 讓連結靠右對齊的容器 */
+.link-container {
+    text-align: right; 
+    margin-bottom: 5px;
+}
+
+/* 街景文字按鈕樣式 */
+.street-link {
+    display: inline-block;
+    color: var(--railway-blue);
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 8px;
+    padding: 5px 10px;
+    border: 1px solid var(--railway-blue);
+    border-radius: 4px;
+    font-size: 0.9em;
+    transition: all 0.2s;
+}
+
+.street-link:hover {
+    background-color: var(--railway-blue);
+    color: white;
 }
