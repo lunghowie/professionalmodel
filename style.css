@@ -1,127 +1,177 @@
+/* --- 全域變數設定 --- */
 :root {
-    --railway-blue: #003366;
-    --warning-yellow: #ffcc00;
+    /* 配色優化：更深沉穩重的鐵道藍 */
+    --railway-blue: #002845;
+    /* 配色優化：更有質感的霧金色，取代原本刺眼的黃色 */
+    --model-gold: #D4AF37;
+    /* 背景暖灰色 */
+    --bg-warm-grey: #F5F5F2;
 }
 
 body { 
     font-family: "Microsoft JhengHei", "PingFang TC", sans-serif; 
-    background: #e0e0e0; 
-    padding: 10px; 
+    background-color: var(--bg-warm-grey); /* 使用新的暖灰背景 */
+    padding: 15px; 
     color: #333; 
+    line-height: 1.6;
 }
 
+/* --- Header 區域重新設計 (解決 LOGO 位置問題) --- */
 header { 
-    background: var(--railway-blue); 
+    background: linear-gradient(135deg, var(--railway-blue) 0%, #001a2e 100%); /* 加入微漸層增加質感 */
     color: white; 
-    padding: 1.5rem 1rem; 
-    text-align: center; 
-    border-bottom: 5px solid var(--warning-yellow); 
-    border-radius: 8px 8px 0 0; 
+    padding: 1.5rem; 
+    /* 使用 Flexbox 讓內容垂直置中 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 4px solid var(--model-gold); /* 使用霧金色邊框 */
+    border-radius: 12px 12px 0 0; 
+}
+
+/* 新增：品牌組合區塊 (LOGO + 標題並排) */
+.brand-lockup {
+    display: flex;
+    align-items: center; /* 垂直置中對齊 */
+    justify-content: center;
+    gap: 15px; /* LOGO 與文字的間距 */
+    margin-bottom: 10px;
 }
 
 .logo-img { 
-    max-width: 150px; 
+    max-width: 70px; /* 調整為適合並排的大小 */
     height: auto; 
-    margin-bottom: 10px; 
-    border-radius: 5px; 
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3); /* 增加一點立體感 */
 }
 
+h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.subtitle {
+    margin: 5px 0 0 0; 
+    letter-spacing: 2px; 
+    font-size: 0.95rem;
+    opacity: 0.9;
+    color: var(--model-gold); /* 副標題使用金色點綴 */
+}
+
+/* --- 主要容器與區塊 --- */
 .container { 
     max-width: 700px; 
     margin: auto; 
     background: white; 
-    padding: 20px; 
-    border-radius: 0 0 8px 8px; 
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
+    padding: 25px; 
+    border-radius: 0 0 12px 12px; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08); /* 更柔和現代的陰影 */
 }
 
-/* 導航按鈕：深藍背景 + 白色文字 */
+hr {
+    border: 0;
+    height: 1px;
+    background: #eee;
+    margin: 30px 0;
+}
+
+/* --- 導航按鈕優化 --- */
 .nav-button { 
     display: block; 
     background: var(--railway-blue); 
-    color: #ffffff !important; /* 強制覆蓋連結的藍色 */
+    color: #ffffff !important; 
     text-align: center; 
-    padding: 15px; 
+    padding: 16px; 
     border-radius: 50px; 
     text-decoration: none; 
     font-weight: bold; 
-    font-size: 1.2em; 
-    margin: 20px 0; 
-    box-shadow: 0 4px #002244; 
-    transition: background 0.3s;
+    font-size: 1.2rem; 
+    margin: 25px 0; 
+    box-shadow: 0 4px 12px rgba(0, 40, 69, 0.4); /* 使用深藍色陰影 */
+    transition: all 0.3s ease;
 }
 
 .nav-button:hover { 
-    background: #004488; 
-    color: var(--warning-yellow) !important; 
+    background: #003d6b; /* 滑鼠移入稍微變亮 */
+    transform: translateY(-2px); /* 輕微上浮效果 */
+    box-shadow: 0 6px 16px rgba(0, 40, 69, 0.5);
 }
 
+/* --- 步驟卡片優化 --- */
 .step-card { 
-    border-left: 5px solid var(--railway-blue); 
-    margin-bottom: 30px; 
-    padding-left: 15px; 
+    border-left: 4px solid var(--railway-blue); 
+    background: #fff;
+    margin-bottom: 35px; 
+    padding: 5px 0 5px 20px; 
 }
 
-/* 圖片樣式：設定為自動高度，避免截圖變形 */
+.step-card h3 {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+}
+
 .step-img { 
     width: 100%; 
-    height: auto; /* 確保圖片比例正確 */
-    border-radius: 5px; 
-    border: 1px solid #ccc; 
-    margin-top: 10px; 
+    height: auto; 
+    border-radius: 8px; 
+    border: 1px solid #eee;
+    margin-top: 15px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 .badge { 
     background: var(--railway-blue); 
     color: white; 
-    padding: 4px 12px; 
+    padding: 5px 12px; 
     border-radius: 20px; 
-    font-size: 0.85em; 
-    font-weight: bold; 
+    font-size: 0.8rem; 
+    font-weight: normal;
+    margin-right: 10px;
+    letter-spacing: 1px;
 }
 
-.footer-info { 
-    text-align: center; 
-    font-size: 0.8em; 
-    color: #777; 
-    margin-top: 40px; 
-    border-top: 1px solid #ddd; 
-    padding-top: 20px; 
+/* --- 連結與提示優化 --- */
+.link-container {
+    text-align: right; 
+    margin-top: 8px;
+}
+
+.street-link {
+    display: inline-block;
+    color: var(--railway-blue);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: all 0.2s;
+    border-bottom: 1px dotted var(--railway-blue);
+}
+
+.street-link:hover {
+    color: #005091;
+    border-bottom-style: solid;
 }
 
 small { 
     display: block; 
-    margin-top: 10px; 
+    margin-top: 15px; 
     color: #555; 
     line-height: 1.5; 
-    background: #f9f9f9; 
-    padding: 8px; 
-    border-radius: 4px; 
+    background: var(--bg-warm-grey); /* 使用暖灰背景 */
+    padding: 12px; 
+    border-radius: 6px; 
+    border-left: 3px solid var(--model-gold); /* 使用金色邊框提示 */
+    font-size: 0.9rem;
 }
 
-/* --- 以下是新增的街景連結樣式 --- */
-
-/* 讓連結靠右對齊的容器 */
-.link-container {
-    text-align: right; 
-    margin-bottom: 5px;
-}
-
-/* 街景文字按鈕樣式 */
-.street-link {
-    display: inline-block;
-    color: var(--railway-blue);
-    font-weight: bold;
-    text-decoration: none;
-    margin-top: 8px;
-    padding: 5px 10px;
-    border: 1px solid var(--railway-blue);
-    border-radius: 4px;
-    font-size: 0.9em;
-    transition: all 0.2s;
-}
-
-.street-link:hover {
-    background-color: var(--railway-blue);
-    color: white;
+.footer-info { 
+    text-align: center; 
+    font-size: 0.85em; 
+    color: #888; 
+    margin-top: 50px; 
+    border-top: 1px solid #eee; 
+    padding-top: 25px; 
+    line-height: 1.8;
 }
