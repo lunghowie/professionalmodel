@@ -175,3 +175,51 @@ small {
     padding-top: 25px; 
     line-height: 1.8;
 }
+
+/* --- 新增：區塊分類標題 --- */
+.section-divider {
+    display: flex;
+    align-items: center;
+    color: var(--railway-blue);
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 30px 0 15px 0;
+}
+.section-divider::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 20px;
+    background: var(--model-gold); /* 使用霧金色作為裝飾 */
+    margin-right: 10px;
+    border-radius: 2px;
+}
+
+/* --- 新增：施工中/建置中區塊樣式 --- */
+.construction-card {
+    border: 2px dashed #ccc; /* 使用虛線代表未完成 */
+    background-color: #fafafa; /* 淺灰背景 */
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #888;
+}
+
+.construction-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    opacity: 0.5;
+}
+
+.construction-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.construction-text {
+    font-size: 0.9rem;
+    color: #999;
+}
