@@ -232,3 +232,36 @@ small {
 .call-button:active {
     transform: scale(0.95); /* 按下去會有縮小效果 */
 }
+
+/* --- 新增：LINE 按鈕與按鈕群組排版 --- */
+
+/* 讓按鈕並排的容器 */
+.action-buttons {
+    display: flex;
+    justify-content: center; /* 內容置中 */
+    gap: 15px; /* 按鈕之間的距離 */
+    flex-wrap: wrap; /* 如果螢幕太小(例如小手機)，會自動變成上下排列 */
+}
+
+/* LINE 專用綠色按鈕 */
+.line-button {
+    display: inline-block;
+    background-color: #00B900; /* LINE 官方綠色 */
+    color: white;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+    transition: transform 0.2s;
+    border: none; /* 確保沒有邊框 */
+}
+
+.line-button:hover {
+    background-color: #009900; /* 滑鼠移上去變深綠 */
+}
+
+.line-button:active {
+    transform: scale(0.95);
+}
