@@ -195,31 +195,40 @@ small {
     border-radius: 2px;
 }
 
-/* --- 新增：施工中/建置中區塊樣式 --- */
-.construction-card {
-    border: 2px dashed #ccc; /* 使用虛線代表未完成 */
-    background-color: #fafafa; /* 淺灰背景 */
-    border-radius: 8px;
-    padding: 30px;
+/* --- 新增：緊急聯絡人區塊 --- */
+.emergency-contact {
+    background-color: #fff8e1; /* 淡淡的鵝黃色背景，很顯眼 */
+    border: 2px solid #ffecb3;
+    border-radius: 10px;
+    padding: 25px;
     text-align: center;
-    margin-bottom: 20px;
-    color: #888;
+    margin: 30px 0;
 }
 
-.construction-icon {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    opacity: 0.5;
-}
-
-.construction-title {
-    font-size: 1.1rem;
+.emergency-title {
+    color: #f57f17; /* 深橘黃色文字 */
     font-weight: bold;
-    color: #666;
-    margin-bottom: 5px;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
 }
 
-.construction-text {
-    font-size: 0.9rem;
-    color: #999;
+.call-button {
+    display: inline-block;
+    background-color: #ff9800; /* 亮橘色按鈕 */
+    color: white;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+    transition: transform 0.2s;
+}
+
+.call-button:hover {
+    background-color: #f57c00;
+}
+
+.call-button:active {
+    transform: scale(0.95); /* 按下去會有縮小效果 */
 }
