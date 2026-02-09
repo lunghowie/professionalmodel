@@ -266,34 +266,44 @@ small {
     transform: scale(0.95);
 }
 
-/* --- 新增：頂部快速導覽列 --- */
+/* --- 頂部快速導覽列 (按鈕強化版) --- */
 .quick-nav {
     display: flex;
     justify-content: center;
-    gap: 10px; /* 按鈕之間的間距 */
-    margin: 15px 0 25px 0; /* 上下留白 */
-    flex-wrap: wrap; /* 手機螢幕太小會自動換行 */
+    gap: 15px; /* 按鈕之間的間距加大 */
+    margin: 20px 0 30px 0; /* 增加與下方的距離 */
+    flex-wrap: wrap; 
 }
 
 .quick-link {
-    display: inline-block;
-    background-color: white;
-    color: var(--railway-blue); /* 使用原本的鐵道藍 */
-    border: 1px solid var(--railway-blue);
-    padding: 8px 16px;
-    border-radius: 50px; /* 圓角造型 */
+    display: flex;
+    align-items: center; /* 讓圖示跟文字垂直置中 */
+    justify-content: center;
+    
+    background-color: #f0f4f8; /* 淺灰藍底色，與主按鈕區隔 */
+    color: #0e2a47; /* 深藍色文字 */
+    border: 2px solid #0e2a47; /* 深藍色邊框 */
+    
+    padding: 10px 20px;
+    border-radius: 12px; /* 稍微方圓一點，比較像現代APP按鈕 */
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-weight: bold;
-    transition: all 0.2s;
+    
+    /* 關鍵：立體陰影效果 */
+    box-shadow: 0 4px 0 #cbd5e0; 
+    transition: all 0.1s; /* 快速反應 */
 }
 
+/* 滑鼠移過去 */
 .quick-link:hover {
-    background-color: #f0f8ff; /* 滑鼠移過去變淡藍色 */
+    background-color: #fff; /* 變白 */
+    transform: translateY(-2px); /* 微微浮起 */
+    box-shadow: 0 6px 0 #cbd5e0; /* 陰影變長 */
 }
 
+/* 按下去的瞬間 */
 .quick-link:active {
-    transform: scale(0.95); /* 按下去縮小一點點 */
-    background-color: var(--railway-blue);
-    color: white;
+    transform: translateY(4px); /* 往下壓 */
+    box-shadow: 0 0 0 #cbd5e0; /* 陰影消失 (壓扁效果) */
 }
