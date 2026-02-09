@@ -265,3 +265,35 @@ small {
 .line-button:active {
     transform: scale(0.95);
 }
+
+/* --- 新增：頂部快速導覽列 --- */
+.quick-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* 按鈕之間的間距 */
+    margin: 15px 0 25px 0; /* 上下留白 */
+    flex-wrap: wrap; /* 手機螢幕太小會自動換行 */
+}
+
+.quick-link {
+    display: inline-block;
+    background-color: white;
+    color: var(--railway-blue); /* 使用原本的鐵道藍 */
+    border: 1px solid var(--railway-blue);
+    padding: 8px 16px;
+    border-radius: 50px; /* 圓角造型 */
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+.quick-link:hover {
+    background-color: #f0f8ff; /* 滑鼠移過去變淡藍色 */
+}
+
+.quick-link:active {
+    transform: scale(0.95); /* 按下去縮小一點點 */
+    background-color: var(--railway-blue);
+    color: white;
+}
