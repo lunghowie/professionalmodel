@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>專業模型 - 店面遷移公告</title>
     <link rel="stylesheet" href="style.css">
+    <meta property="og:title" content="專業模型 - 店面遷移公告">
+    <meta property="og:description" content="我們要搬家囉！新址位於高雄市三民區建國一路402巷，點擊查看詳細導航與交通指引。">
+    <meta property="og:image" content="https://lunghowie.github.io/professionalmodel/picture/professional_model_logo.png">
+    <meta property="og:url" content="https://lunghowie.github.io/professionalmodel/">
+    <meta property="og:type" content="website">
 </head>
 <body>
 
@@ -19,8 +24,10 @@
 
     <section>
         <div style="text-align: center; margin: 20px 0 25px 0;">
-            <p style="font-size: 1.1rem; color: #333; font-weight: 500; margin-bottom: 20px;">
-                📍 高雄市三民區建國一路402巷5弄7號
+            <p id="store-address" class="clickable-address" onclick="copyAddress()" 
+               style="font-size: 1.1rem; color: #333; font-weight: 500; margin-bottom: 20px;" 
+               title="點擊即可複製地址">
+                📍 高雄市三民區建國一路402巷5弄7號 <span style="font-size:0.8rem; color:#888; margin-left:5px;">(📋點我複製)</span>
             </p>
 
             <a href="https://www.google.com/maps/dir/?api=1&destination=高雄市三民區建國一路402巷5弄7號" target="_blank" class="nav-button" style="margin-bottom: 0;">
@@ -197,6 +204,8 @@
                 <a href="tel:0929063160" class="call-button">📞 打給張姐</a>
                 
                 <a href="https://line.me/ti/p/k7sYfPh68t" target="_blank" class="line-button">💬 加 LINE 詢問</a>
+
+                <a href="https://www.facebook.com/car2233339" target="_blank" class="fb-button">f FB 粉絲團</a>
             </div>
         </div>
     </section>
@@ -206,6 +215,28 @@
         <p>如有任何問題，歡迎透過 LINE 或 FB 私訊我們</p>
     </footer>
 </div>
+
+<div id="toast-notification">✅ 地址已複製到剪貼簿！</div>
+
+<script>
+    function copyAddress() {
+        // 要複製的文字
+        const addressText = "高雄市三民區建國一路402巷5弄7號";
+        
+        // 執行複製
+        navigator.clipboard.writeText(addressText).then(function() {
+            // 複製成功，顯示提示框
+            var toast = document.getElementById("toast-notification");
+            toast.className = "show";
+            
+            // 3秒後自動消失
+            setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
+        }, function(err) {
+            // 如果瀏覽器不支援，用傳統 alert
+            alert("地址已複製！");
+        });
+    }
+</script>
 
 </body>
 </html>

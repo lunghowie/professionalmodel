@@ -266,6 +266,29 @@ small {
     transform: scale(0.95);
 }
 
+/* FB 專用藍色按鈕 */
+.fb-button {
+    display: inline-block;
+    background-color: #1877F2; /* FB 官方藍色 */
+    color: white;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+    transition: transform 0.2s;
+    border: none;
+}
+
+.fb-button:hover {
+    background-color: #166fe5; /* 滑鼠移上去變深一點 */
+}
+
+.fb-button:active {
+    transform: scale(0.95);
+}
+
 /* --- 頂部快速導覽列 (按鈕強化版) --- */
 .quick-nav {
     display: flex;
@@ -306,4 +329,43 @@ small {
 .quick-link:active {
     transform: translateY(4px); /* 往下壓 */
     box-shadow: 0 0 0 #cbd5e0; /* 陰影消失 (壓扁效果) */
+}
+
+/* --- 複製成功提示框 (Toast) --- */
+#toast-notification {
+    visibility: hidden; /* 預設隱藏 */
+    min-width: 250px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 50px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    opacity: 0;
+    transition: opacity 0.5s, bottom 0.5s;
+}
+
+/* 顯示時的狀態 */
+#toast-notification.show {
+    visibility: visible;
+    opacity: 1;
+    bottom: 50px; /* 稍微往上浮的效果 */
+}
+
+/* 讓地址變成手指游標，暗示可點擊 */
+.clickable-address {
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.clickable-address:hover {
+    color: var(--railway-blue) !important; /* 滑鼠移過去變藍色 */
+}
+.clickable-address:active {
+    transform: scale(0.98);
 }
